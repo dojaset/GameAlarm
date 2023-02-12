@@ -23,13 +23,22 @@ public class AlarmManager : MonoBehaviour
 
     void Update()
     {
+        DateTimeNow(); //현재 시간 표시
+    }
+
+    void DateTimeNow() //현재 시간 표시
+    {
         if (isHour24) //24시간제로 설정된 경우
         {
             dateTimeNow.text = DateTime.Now.ToLongDateString() + "\n" + DateTime.Now.ToString("HH : mm : ss");
+            //0000년 0월 0일 일요일
+            //   00 : 00 : 00
         }
         else //12시간제로 설정된 경우
         {
             dateTimeNow.text = DateTime.Now.ToLongDateString() + "\n" + DateTime.Now.ToString("tt hh : mm : ss");
+            //0000년 0월 0일 일요일
+            // 오전 00 : 00 : 00
         }
     }
 
