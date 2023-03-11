@@ -20,15 +20,21 @@ public class NewAlarm : MonoBehaviour
     {
         alarmText = GetComponentsInChildren<TextMeshProUGUI>(); //TMP 컴포넌트 불러오기
 
-        alarmText[2].text = alarmData.alarmLabel; //알람 라벨을 데이터 파일의 라벨로 변경
+        LabelUpdate();  //알람 라벨 표시
+        StatusUpdate(); //알람 활성 상태 표시
+        TimeUpdate();   //알람 설정 시간 표시
+        DayUpdate();    //알람 설정 요일 표시
+    }
 
-        if (!alarmData.isAlarmDay.Contains(true)) { alarmData.isActive = false; }
-        //알람이 울리도록 설정된 요일이 없다면 알람 활성 상태를 off
+    void LabelUpdate() => alarmText[2].text = alarmData.alarmLabel;
+    //알람 라벨을 데이터 파일의 라벨로 변경
 
-        toggle.isOn = alarmData.isActive;
+    void StatusUpdate()
+    {
+        alarmData.isActive = alarmData.isAlarmDay.Contains(true);
+        //알람이 울리도록 설정된 요일이 있다면 알람 활성 상태를 on
 
-        TimeUpdate(); //알람 설정 시간 표시
-        DayUpdate();  //알람 설정 요일 표시
+        toggle.isOn = alarmData.isActive; //알람 활성 상태를 토글에 반영
     }
 
     void TimeUpdate()
