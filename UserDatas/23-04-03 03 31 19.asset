@@ -10,10 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b7704f664c0eff438db6da0f9407507, type: 3}
-  m_Name: AlarmData
+  m_Name: 23-04-03 03 31 19
   m_EditorClassIdentifier: 
-  alarmTime: 0700000028000000
-  isAlarmDay: 01010101010000
+  alarmHour: 11
+  alarmMinute: 30
   isAM: 1
+  repeatDay: 01000100010000
+  audioClip: {fileID: 8300000, guid: ce1c645ff58fb6a4791c289ef74363c4, type: 3}
+  soundMode: 1
+  vibrationMode: 0
+  intervalMin: 10
+  intervalNum: 2
+  delayMin: 5
+  delayNum: 5
   alarmLabel: "\uC77C\uC5B4\uB098\uC57C\uC9C0"
-  isActive: 0
+  gameType: GuguDan
+  holidayMode: 1
+  isActive: 1
+  createDate: 23-04-03 03 31 19
+  updateDate: 23-04-03 03 36 56
